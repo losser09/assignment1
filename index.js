@@ -7,7 +7,8 @@ const port = 3000;
 const app = express();
 
 
-
+var leaderRouter = require('./leaderRouter');
+app.use('/leadership', leaderRouter.router);
 const dishRouter = require('./dishRouter');
 app.use('/dishes', dishRouter.router);
 var promoRouter = require('./promoRouter');
