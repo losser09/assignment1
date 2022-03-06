@@ -10,6 +10,8 @@ const app = express();
 
 const dishRouter = require('./dishRouter');
 app.use('/dishes', dishRouter.router);
+var promoRouter = require('./promoRouter');
+app.use('/promotions', promoRouter.router);
 app.listen(port, hostname, function () {
     console.log(`Server running at http://${hostname}:${port}/`);
 });
